@@ -18,5 +18,12 @@
 
 /* Add some padding inside the card container */
 .container {
-  padding: 2px 16px;
+
+  margin: auto;
+  width: 50%;
+
+}
+.logo {
+  margin: auto;
+  width: 50%;
 }
