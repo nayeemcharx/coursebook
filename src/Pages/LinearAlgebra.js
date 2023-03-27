@@ -1,10 +1,10 @@
-import Header from "../Components/Header"
+import NavigationBar from "../Components/NavigationBar"
 import TopicCard from "../Components/TopicCard"
 
 const LinearAlgebra = () => {
   return (
     <div className="Linear-Algebra">
-        <Header />
+        <NavigationBar className="NavBar"/>
         <div className="topic-list">
           <TopicCard />
           <TopicCard />

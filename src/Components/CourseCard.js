@@ -1,5 +1,3 @@
-import mvc from '../Assets/multivariable_calculus.png'
-import PropTypes from 'prop-types'
 const CourseCard = ({title,image,onClick}) => {
 
   return (

@@ -47,6 +47,8 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .topic-list{
+  margin: auto;
+  width: 50%;
   display: grid;
   grid-auto-columns: minmax(15rem, auto);
   grid-gap: 1rem;
@@ -57,7 +59,21 @@ img {
   border-radius: 15px 15px 0 0;
 }
 .Linear-Algebra{
+  background-color: #dec7c7;
+  font-family: 'Outfit';
+  font-size: 20px;
+}
+
+.Navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
   align-items: center;
-  margin: auto;
-  width: 50%;
+}
+
+.Navbar * {
+  display: inline-block;
 }

@@ -11,9 +11,6 @@ const Body = () => {
   const onClickToLinearAlgebra = () => {
     navigate('/LinearAlgebra')
   }
-  const MVC={
-    title:'Multivariable Calculus'
-  }
   return (
     <div className="course-list">
         <CourseCard 
