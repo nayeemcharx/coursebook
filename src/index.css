@@ -1,3 +1,4 @@
+* {background-color: #dec7c7}
 .course-list {
   display: grid;
   grid-auto-columns: minmax(15rem, auto);
@@ -9,7 +10,7 @@
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
+  border-radius: 15px; /* 5px rounded corners */
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -20,6 +21,7 @@
 /* Add some padding inside the card container */
 .container {
 
+  
   margin: auto;
   width: 50%;
 
@@ -28,7 +30,34 @@
   margin: auto;
   width: 50%;
 }
+.course-info{
+  font-size: 18px;
+  font-family: 'Outfit';
+  text-align: center;
+  width: 100%;
+  height: 1%;
+}
+.topic-card{
+   /* Add shadows to create the "card" effect */
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   transition: 0.3s;
+   border-radius: 15px; /* 5px rounded corners */
+}
+.topic-card:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.topic-list{
+  display: grid;
+  grid-auto-columns: minmax(15rem, auto);
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
 /* Add rounded corners to the top left and the top right corner of the image */
 img {
-  border-radius: 5px 5px 0 0;
+  border-radius: 15px 15px 0 0;
+}
+.Linear-Algebra{
+  align-items: center;
+  margin: auto;
+  width: 50%;
 }

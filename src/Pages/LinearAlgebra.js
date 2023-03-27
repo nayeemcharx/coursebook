@@ -3,9 +3,12 @@ import TopicCard from "../Components/TopicCard"
 
 const LinearAlgebra = () => {
   return (
-    <div className="Topic">
+    <div className="Linear-Algebra">
         <Header />
-        <TopicCard />
+        <div className="topic-list">
+          <TopicCard />
+          <TopicCard />
+        </div>
     </div>
   )
 }
