@@ -1,11 +1,16 @@
-import Card from './Card'
+import CourseCard from './CourseCard'
+import { useNavigate } from 'react-router-dom'
 
 const Body = () => {
+  const navigate = useNavigate()
+  const onClick = () => {
+    navigate('/LinearAlgebra')
+  }
   return (
     <div className="course-list">
-        <Card />
-        <Card />
-        <Card />
+        <CourseCard onClick={onClick}/>
+        <CourseCard />
+        <CourseCard />
     </div>
   )
 }
