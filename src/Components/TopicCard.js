@@ -1,18 +1,29 @@
 import React from 'react'
 
-const TopicCard = ({topicTitile, topicDescription, Image}) => {
+const TopicCard = ({topicTitile, diffcult, Image}) => {
   return (
-    <div className='topic-card'>
-        <div className='topic-title'>topicTitile</div>
-        <div className='topic-description'>topicDescription</div>
-        <div className='topic-image'>Image</div>
+    <div className="ag-courses_item">
+      <a href="#" className="ag-courses-item_link">
+        <div className="ag-courses-item_bg"></div>
+
+        <div className="Topic-Title">
+          {topicTitile}
+        </div>
+
+        <div className="Topic-Diff-Box">
+          Difficulties:
+          <span className="Topic-diff-Value">
+            {diffcult}
+          </span>
+        </div>
+      </a>
     </div>
   )
 }
 
 TopicCard.defaultProps = {
     topicTitile: 'Topic Title',
-    topicDescription: 'Topic Description',
+    diffcult: 'Topic Diffculty',
     Image: 'Image'
 }
 

@@ -5,8 +5,8 @@ const LinearAlgebra = () => {
   return (
     <div className="Linear-Algebra">
         <NavigationBar className="NavBar"/>
-        <div className="topic-list">
-          <TopicCard />
+        <div className="ag-courses_box">
+          <TopicCard topicTitile='Null Space' diffcult='medium'/>
           <TopicCard />
         </div>
     </div>

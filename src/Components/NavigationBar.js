@@ -1,25 +1,40 @@
-import {Navbar, Nav} from 'rsuite'
-import HomeIcon from '@rsuite/icons/legacy/Home';
-import CogIcon from '@rsuite/icons/legacy/Cog';
-
+import React from 'react';
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+  NavBtn,
+  NavBtnLink,
+} from './NavBarElements';
+import { useNavigate } from 'react-router-dom'
 const NavigationBar = () => {
+  const navigate = useNavigate()
+  const onClickToLinearAlgebra = () => {
+    navigate('/LinearAlgebra')
+  }
   return (
-    <Navbar>
-    <Navbar.Brand>Coursebook</Navbar.Brand>
-    <Nav>
-      <Nav.Item icon={<HomeIcon />}>Home</Nav.Item>
-      <Nav.Menu title="About">
-        <Nav.Menu title="Contact">
-          <Nav.Item>tahmidmahin1729@gmail.com</Nav.Item>
-          <Nav.Item>01632037012</Nav.Item>
-        </Nav.Menu>
-      </Nav.Menu>
-    </Nav>
-    <Nav pullRight>
-      <Nav.Item icon={<CogIcon />}>Settings</Nav.Item>
-    </Nav>
-  </Navbar>
-  )
-}
-
+    
+    <>
+      <Nav>
+        <Bars />
+  
+        <NavMenu>
+          <NavLink onClick={onClickToLinearAlgebra}>
+            Agorithms
+          </NavLink>
+          <NavLink to='/Quizz' activeStyle>
+            Quizz
+          </NavLink>
+          <NavLink to='/Question' activeStyle>
+            Questions
+          </NavLink>
+        </NavMenu>
+        <NavBtn>
+          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+        </NavBtn>
+      </Nav>
+    </>
+  );
+};
 export default NavigationBar
