@@ -11,24 +11,40 @@ const Body = () => {
   const onClickToLinearAlgebra = () => {
     navigate('/LinearAlgebra')
   }
+  const onClickToMultivariableCalculus = () => {
+    navigate('/MultivariableCalculus')
+  }
+  const onClickToMicrocontroller = () => {
+    navigate('/Microcontroller')
+  }
+  const onClickToAutomata = () => {
+    navigate('/Automata')
+  }
+  const onClickToDataStructure = () => {
+    navigate('/DataStructure')
+  }
   return (
     <div className="course-list">
         <CourseCard 
           title="Multivariable Calculus"
           image={mvcImg}
-          onClick={onClickToLinearAlgebra} />
+          onClick={onClickToMultivariableCalculus} />
         <CourseCard
           title="Microcontroller"
-          image={MicrocontrollerImg} />
+          image={MicrocontrollerImg}
+          onClick={onClickToMicrocontroller} />
         <CourseCard 
           title="Linear Algebra"
-          image={linear_algebraImg}/>
+          image={linear_algebraImg}
+          onClick={onClickToLinearAlgebra} />
         <CourseCard 
           title="Automata"
-          image={automataImg}/>
+          image={automataImg}
+          onClick={onClickToAutomata} />
         <CourseCard 
           title="Data Structure and Algorithms"
-          image={algorithmImg}/>
+          image={algorithmImg}
+          onClick={onClickToDataStructure} />
           
     </div>
   )

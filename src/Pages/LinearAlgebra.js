@@ -1,18 +1,54 @@
 import NavigationBar from "../Components/NavigationBar"
-import TopicCard from "../Components/TopicCard"
 import AlgorithmList from "../Components/AlgorithmList"
 
 const LinearAlgebra = () => {
-  const item=[{
-    title:"Finding null Space",
-    description:"A detailed description about how null space works and stuffs",
-    link:'LinearAlgebra/NullSpaceSimul'
-},
-{
-  title:"Calculate Rank of a matrix",
-  description:"sdflsdjhfjiseohrwe sdfikhsdijfwe rweuirhweirbwe ewruiowerhwekrtjh",
-  link:''
-}]
+  const item = [
+    {
+      title: "Null Space",
+      description: "Null space of a matrix",
+      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+    },
+    {
+      title: "Row Space",
+      description: "Row space of a matrix",
+      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+    },
+    {
+      title: "Column Space",
+      description: "Column space of a matrix",
+      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+    },
+    {
+      title: "Rank",
+      description: "Rank of a matrix",
+      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+    },
+    {
+      title: "Determinant",
+      description: "Determinant of a matrix",
+      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+    },
+    {
+      title: "Inverse",
+      description: "Inverse of a matrix",
+      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+    },
+    {
+      title: "Transpose",
+      description: "Transpose of a matrix",
+      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+    },
+    {
+      title: "Orthogonal",
+      description: "Orthogonal of a matrix",
+      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+    },
+    {
+      title: "Orthogonal Complement",
+      description: "Orthogonal Complement of a matrix",
+      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+    }
+  ]
   return (
     <div className="Linear-Algebra">
         <NavigationBar className="NavBar"/>
