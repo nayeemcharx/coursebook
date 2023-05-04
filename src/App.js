@@ -6,7 +6,7 @@ import MultivariableCalculus from "./Pages/MultivariableCalculus";
 import Microcontroller from "./Pages/MicroController";
 import Automata from "./Pages/Automata";
 import DataStructure from "./Pages/DataStructure";
-import NullSpaceSimul from "./Pages/NullSpaceSimul";
+import Simulation from "./Pages/Simulation.tsx";
 function App() {
   return (
     <div className="App">
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="LinearAlgebra" element={<LinearAlgebra />} />
-          <Route path="LinearAlgebra/NullSpaceSimul" element={<NullSpaceSimul />} />
+          <Route path="LinearAlgebra/Simulation" element={<Simulation />} />
           <Route path="MultivariableCalculus" element={<MultivariableCalculus />} />
           <Route path="Microcontroller" element={<Microcontroller />} />
           <Route path="Automata" element={<Automata />} />

@@ -6,7 +6,7 @@ const LinearAlgebra = () => {
     {
       title: "Null Space",
       description: "Null space of a matrix",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+      link: "LinearAlgebra/Simulation"
     },
     {
       title: "Row Space",
