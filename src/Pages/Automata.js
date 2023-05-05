@@ -6,7 +6,7 @@ const Automata = () => {
     {
       title: "Finite State Machine",
       description: "Finite State Machine",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+      link: "Automata/GraphSimulation"
     },
     {
       title: "Turing Machine",

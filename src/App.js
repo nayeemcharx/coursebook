@@ -7,6 +7,8 @@ import Microcontroller from "./Pages/MicroController";
 import Automata from "./Pages/Automata";
 import DataStructure from "./Pages/DataStructure";
 import Simulation from "./Pages/Simulation.tsx";
+import GraphSimulation from "./Pages/GraphSimulation";
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,7 @@ function App() {
           <Route path="MultivariableCalculus" element={<MultivariableCalculus />} />
           <Route path="Microcontroller" element={<Microcontroller />} />
           <Route path="Automata" element={<Automata />} />
+          <Route path="Automata/GraphSimulation" element={<GraphSimulation />} />
           <Route path="DataStructure" element={<DataStructure />} />
         </Routes>
       </BrowserRouter>

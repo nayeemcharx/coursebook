@@ -60,6 +60,16 @@ const Simulation = () =>{
         <Vector tip={jHat.point} color={Theme.blue}/>
           
       </Mafs>
+      <div className="inputMatrix">
+        <div className="inputMatrix__row">
+          <input type="number" ></input>
+          <input type="number" ></input>
+        </div>
+        <div className="inputMatrix__row">
+          <input type="number" ></input>
+          <input type="number" ></input>
+        </div>
+      </div>
     </React.Fragment>
   )
 }
