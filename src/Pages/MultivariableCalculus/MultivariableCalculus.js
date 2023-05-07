@@ -1,5 +1,5 @@
-import NavigationBar from "../Components/NavigationBar"
-import AlgorithmList from "../Components/AlgorithmList"
+import NavigationBar from "../../Components/NavigationBar"
+import AlgorithmList from "../../Components/AlgorithmList"
 
 const MultivariableCalculus = () => {
   const item = [
@@ -36,7 +36,10 @@ const MultivariableCalculus = () => {
   ]
   return (
     <div className="Multivariable-Calculus">
-        <NavigationBar className="NavBar"/>
+        <NavigationBar className="NavBar"
+         algoPath='/MultivariableCalculus'
+         quizPath='/MultivariableCalculus/Quiz'
+         questionPath='/MultivariableCalculus/Question'/>
         <AlgorithmList items={item}/>
     </div>
   )

@@ -7,12 +7,7 @@ import {
   NavBtn,
   NavBtnLink,
 } from './NavBarElements';
-import { useNavigate } from 'react-router-dom'
-const NavigationBar = () => {
-  const navigate = useNavigate()
-  const onClickToLinearAlgebra = () => {
-    navigate('/LinearAlgebra')
-  }
+const NavigationBar = ({ algoPath,quizPath,questionPath}) => {
   return (
     
     <>
@@ -20,18 +15,18 @@ const NavigationBar = () => {
         <Bars />
   
         <NavMenu>
-          <NavLink onClick={onClickToLinearAlgebra}>
+          <NavLink to={algoPath} activeStyle>
             Agorithms
           </NavLink>
-          <NavLink to='/Quizz' activeStyle>
+          <NavLink to={quizPath} activeStyle>
             Quizz
           </NavLink>
-          <NavLink to='/Question' activeStyle>
+          <NavLink to={questionPath} activeStyle>
             Questions
           </NavLink>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+          <NavBtnLink to='/'>Home</NavBtnLink>
         </NavBtn>
       </Nav>
     </>

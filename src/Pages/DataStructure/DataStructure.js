@@ -1,5 +1,5 @@
-import NavigationBar from "../Components/NavigationBar"
-import AlgorithmList from "../Components/AlgorithmList"
+import NavigationBar from "../../Components/NavigationBar"
+import AlgorithmList from "../../Components/AlgorithmList"
 
 const DataStructure = () => {
   const item = [
@@ -91,7 +91,11 @@ const DataStructure = () => {
 
   return (
     <div className="Datastructure">
-        <NavigationBar className="NavBar"/>
+        <NavigationBar className="NavBar"
+        algoPath='/DataStructure'
+        quizPath='/DataStructure/Quiz'
+        questionPath='/DataStructure/Question'
+        />
         <AlgorithmList items={item}/>
     </div>
   )

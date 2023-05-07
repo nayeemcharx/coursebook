@@ -1,5 +1,5 @@
-import NavigationBar from "../Components/NavigationBar"
-import AlgorithmList from "../Components/AlgorithmList"
+import NavigationBar from "../../Components/NavigationBar"
+import AlgorithmList from "../../Components/AlgorithmList"
 
 const MicroController = () => {
   const item = [
@@ -20,7 +20,10 @@ const MicroController = () => {
     }]
   return (
     <div className="Micro-Controller">
-        <NavigationBar className="NavBar"/>
+        <NavigationBar className="NavBar"
+         algoPath='/Microcontroller'
+         quizPath='/Microcontroller/Quiz'
+         questionPath='/Microcontroller/Question'/>
         <AlgorithmList items={item}/>
     </div>
   )

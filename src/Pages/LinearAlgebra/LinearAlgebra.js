@@ -1,7 +1,8 @@
-import NavigationBar from "../Components/NavigationBar"
-import AlgorithmList from "../Components/AlgorithmList"
+import NavigationBar from "../../Components/NavigationBar"
+import AlgorithmList from "../../Components/AlgorithmList"
 
-const LinearAlgebra = () => {
+const LinearAlgebra = () => { 
+
   const item = [
     {
       title: "Null Space",
@@ -51,7 +52,11 @@ const LinearAlgebra = () => {
   ]
   return (
     <div className="Linear-Algebra">
-        <NavigationBar className="NavBar"/>
+        <NavigationBar className="NavBar" 
+        algoPath='/LinearAlgebra'
+        quizPath='/LinearAlgebra/Quiz'
+        questionPath='/LinearAlgebra/Question'
+        />
         <AlgorithmList items={item}/>
     </div>
   )

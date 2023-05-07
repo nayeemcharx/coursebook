@@ -1,5 +1,5 @@
-import NavigationBar from "../Components/NavigationBar"
-import AlgorithmList from "../Components/AlgorithmList"
+import NavigationBar from "../../Components/NavigationBar"
+import AlgorithmList from "../../Components/AlgorithmList"
 
 const Automata = () => {
   const item = [
@@ -25,7 +25,10 @@ const Automata = () => {
     }]
   return (
     <div className="Automata">
-        <NavigationBar className="NavBar"/>
+        <NavigationBar className="NavBar"
+        algoPath='/Automata'
+        quizPath='/Automata/Quiz'
+        questionPath='/Automata/Question'/>
         <AlgorithmList items={item}/>
     </div>
   )
