@@ -5,7 +5,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import LinearAlgebra from "./Pages/LinearAlgebra/LinearAlgebra";
 import LinearAlgebraQuiz from "./Pages/LinearAlgebra/Quiz";
 import LinearAlgebraQuestion from "./Pages/LinearAlgebra/Question";
-import Simulation from "./Pages/LinearAlgebra/Simulation.tsx";
+import Simulation from "./Pages/LinearAlgebra/MatrixTransformation.tsx";
 
 import MultivariableCalculus from "./Pages/MultivariableCalculus/MultivariableCalculus";
 import MultivariableCalculusQuiz from "./Pages/MultivariableCalculus/Quiz";
