@@ -5,7 +5,8 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import LinearAlgebra from "./Pages/LinearAlgebra/LinearAlgebra";
 import LinearAlgebraQuiz from "./Pages/LinearAlgebra/Quiz";
 import LinearAlgebraQuestion from "./Pages/LinearAlgebra/Question";
-import Simulation from "./Pages/LinearAlgebra/MatrixTransformation.tsx";
+import MatrixTransformation from "./Pages/LinearAlgebra/MatrixTransformation.tsx";
+import NullSpace from "./Pages/LinearAlgebra/NullSpace";
 
 import MultivariableCalculus from "./Pages/MultivariableCalculus/MultivariableCalculus";
 import MultivariableCalculusQuiz from "./Pages/MultivariableCalculus/Quiz";
@@ -34,7 +35,8 @@ function App() {
           <Route path="LinearAlgebra" element={<LinearAlgebra />} />
           <Route path="LinearAlgebra/Question" element={<LinearAlgebraQuestion />} />
           <Route path="LinearAlgebra/Quiz" element={<LinearAlgebraQuiz />} />
-          <Route path="LinearAlgebra/Simulation" element={<Simulation />} />
+          <Route path="LinearAlgebra/MatrixTransformation" element={<MatrixTransformation />} />
+          <Route path="LinearAlgebra/NullSpace" element={<NullSpace />} />
           
           <Route path="MultivariableCalculus" element={<MultivariableCalculus />} />
           <Route path="MultivariableCalculus/Quiz" element={<MultivariableCalculusQuiz />} />

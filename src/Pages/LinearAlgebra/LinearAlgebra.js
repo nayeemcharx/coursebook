@@ -5,9 +5,14 @@ const LinearAlgebra = () => {
 
   const item = [
     {
+      title: "Matrix Transformation",
+      description: "Matrix Transformation",
+      link: "LinearAlgebra/MatrixTransformation"
+    },
+    {
       title: "Null Space",
       description: "Null space of a matrix",
-      link: "LinearAlgebra/Simulation"
+      link: "LinearAlgebra/NullSpace"
     },
     {
       title: "Row Space",
