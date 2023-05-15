@@ -27,7 +27,7 @@ const LinearAlgebra = () => {
     {
       title: "Rank",
       description: "Rank of a matrix",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+      link: "LinearAlgebra/Rank"
     },
     {
       title: "Determinant",

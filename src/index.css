@@ -1,6 +1,58 @@
 @import "mafs/core.css";
 @import "mafs/font.css";
 
+.animationContainer {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  margin-top: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+
+.matrix {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.matrix th,
+.matrix td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.matrix th {
+  background-color: #f2f2f2;
+}
+
+.matrix td {
+  background-color: #fff;
+}
+
+.matrix td.yellow {
+  background-color: yellow;
+}
+
 .course-list {
   display: grid;
   grid-auto-columns: minmax(15rem, auto);

@@ -21,67 +21,37 @@ const DataStructure = () => {
     {
       title: "Tree",
       description: "Tree",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+      link: "DataStructure/Tree"
     },
     {
       title: "Graph",
       description: "Graph",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+      link: "DataStructure/Graph"
     },
     {
       title: "Hash Table",
       description: "Hash Table",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+      link: "DataStructure/HashTable"
     },
     {
       title: "Heap",
       description: "Heap",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
-    },
-    {
-      title: "Trie",
-      description: "Trie",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
-    },
-    {
-      title: "B-Tree",
-      description: "B-Tree",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
-    },
-    {
-      title: "B+ Tree",
-      description: "B+ Tree",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
-    },
-    {
-      title: "Red-Black Tree",
-      description: "Red-Black Tree",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
-    },
-    {
-      title: "AVL Tree",
-      description: "AVL Tree",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
-    },
-    {
-      title: "Splay Tree",
-      description: "Splay Tree",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+      link: "DataStructure/Heap"
     },
     {
       title: "Segment Tree",
       description: "Segment Tree",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+      link: "DataStructure/SegmentTree"
     },
     {
       title: "Fenwick Tree",
       description: "Fenwick Tree",
-      link: "https://www.visualgo.net/en/fenwicktree"
+      link: "DataStructure/FenwickTree"
     },
     {
       title: "Disjoint Set",
       description: "Disjoint Set",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+      link: "DataStructure/DisjointSet"
     },
     {
       title: "Sparse Table",
