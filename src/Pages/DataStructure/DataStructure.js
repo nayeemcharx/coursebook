@@ -76,7 +76,7 @@ const DataStructure = () => {
     {
       title: "Fenwick Tree",
       description: "Fenwick Tree",
-      link: "https://www.desmos.com/calculator/4qjxqjzq2j"
+      link: "https://www.visualgo.net/en/fenwicktree"
     },
     {
       title: "Disjoint Set",
