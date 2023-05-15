@@ -5,7 +5,7 @@ const Quiz = () => {
   const [mcq, setMCQ] = useState([]);
 
   useEffect(() => {
-    fetch("http://coursebookserver.vercel.app/api/automatamcq")
+    fetch("https://coursebookserver.vercel.app/api/automatamcq")
       .then((response) => response.json())
       .then((data) => setMCQ(data.data))
       .catch((error) => console.error("Error fetching MCQ data:", error));
