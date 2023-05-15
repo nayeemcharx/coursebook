@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-function NullSpace() {
+function Rank() {
   const [step, setStep] = useState(0);
   const inputRef = useRef(null);
   const [matrix, setMatrix] = useState([
@@ -13,8 +13,10 @@ function NullSpace() {
   const [columns, setColumns] = useState(3);
   const [pivots, setPivots] = useState([]);
   const [rrefMatrix, setRrefMatrix] = useState([]);
+  const [finished, setFinished] = useState(false);
   useEffect(() => {
     calculateRrefStepByStep();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
 
   const handleMatrixChange = () => {
@@ -24,6 +26,16 @@ function NullSpace() {
       const rowValues = row.split(',');
       return rowValues.map((col) => parseInt(col));
     });
+    //check if matrix is valid
+    if (matrixArray.length === 0) {
+      return;
+    }
+    const firstRowLength = matrixArray[0].length;
+    for (let i = 1; i < matrixArray.length; i++) {
+      if (matrixArray[i].length !== firstRowLength) {
+        return;
+      }
+    }
     setRows(matrixArray.length);
     setColumns(matrixArray[0].length);
     setMatrix(matrixArray);
@@ -35,7 +47,7 @@ function NullSpace() {
     let pivotArray = [];
     for (let r = 0; r < Math.min(step, rows); r++) {
         if (columns <= lead) {
-            
+            setFinished(true);
             return;
         }
         let i = r;
@@ -45,7 +57,7 @@ function NullSpace() {
                 i = r;
                 lead++;
                 if (columns === lead) {
-                    
+                    setFinished(true);
                     return;
                 }
             }
@@ -68,8 +80,9 @@ function NullSpace() {
         lead++;
     }
     setRrefMatrix(mat);
-    if (pivotArray.length !== 0) {
-        setPivots(pivotArray);
+    setPivots(pivotArray);
+    if (step === rows || step === columns) {
+        setFinished(true);
     }
   };
 
@@ -80,13 +93,16 @@ function NullSpace() {
   };
 
   const previousStep = () => {
+    if (finished) {
+        setFinished(false);
+    }
     if (step > 0) {
         setStep(step - 1);
     }
   };
 
   return (
-    <div>
+    <div className='animationContainer'>
       <h1>RREF Derivation</h1>
       <AnimatePresence mode='wait'>
         {step === 0 && (
@@ -115,8 +131,25 @@ function NullSpace() {
           >
             <h2>Step {step}: RREF Matrix:</h2>
             <Matrix matrix={rrefMatrix} pivots={pivots} />
+            {finished && <p>Finished</p>}
+            {!finished &&
+            <><button onClick={previousStep}>Previous Step</button>
+                <button onClick={nextStep}>Next Step</button></>
+                
+            }
+            
+          </motion.div>
+        )}
+        {finished && (
+          <motion.div
+            key={step + 1}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <h2>Step {step + 1}: Conclusion:</h2>
+            <p>The rank of the matrix is {pivots.length}.</p>
             <button onClick={previousStep}>Previous Step</button>
-            <button onClick={nextStep}>Next Step</button>
           </motion.div>
         )}
       </AnimatePresence>
@@ -125,12 +158,12 @@ function NullSpace() {
 }
 function Matrix({ matrix, pivots }) {
   return (
-    <table>
+    <table className='matrix'>
       <tbody>
         {matrix.map((row, i) => (
           <tr key={i}>
             {row.map((col, j) => (
-              <td key={j} style={{ backgroundColor: pivots?.includes(j) ? 'yellow' : 'white' }}>
+              <td key={j} style={{ backgroundColor: pivots?.includes(j) ? 'yellow' : '' }}>
                 {col}
               </td>
             ))}
@@ -141,5 +174,5 @@ function Matrix({ matrix, pivots }) {
   );
 }
 
-export default NullSpace;
+export default Rank;
   
