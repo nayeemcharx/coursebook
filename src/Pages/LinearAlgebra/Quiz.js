@@ -6,7 +6,7 @@ const Quiz = () => {
   const [loading, setLoading] = useState(true); // State to track loading status
 
   useEffect(() => {
-    fetch("https://coursebookserver.vercel.app/api/automatamcq")
+    fetch("https://coursebookserver.vercel.app/api/mcq/linearAlgebra")
       .then((response) => response.json())
       .then((data) => {
         setMCQ(data.data);
@@ -53,7 +53,7 @@ const Quiz = () => {
         ) : (
           mcq.map((question, index) => (
             <div key={index}>
-              <h3>{question.questoin}</h3>
+              <h3>{question.question}</h3>
               <label>
                 <input
                   type="radio"
