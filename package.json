@@ -1,7 +1,7 @@
 {
   "name": "coursebook",
   "version": "0.1.0",
-  "proxy":"http://localhost:5000",
+  "proxy":"https://coursebookserver.vercel.app",
   "private": true,
   "dependencies": {
     "@react-spring/web": "^9.6.1",
