@@ -19,7 +19,7 @@ const Question = () => {
         algoPath='/Automata'
         quizPath='/Automata/Quiz'
         questionPath='/Automata/Question'/>
-        <QuestionList apicall="/api/automata"/>
+        <QuestionList apicall="api/automata"/>
     </div>
     
     
