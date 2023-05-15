@@ -8,7 +8,7 @@ const Question = () => {
          algoPath='/MultivariableCalculus'
          quizPath='/MultivariableCalculus/Quiz'
          questionPath='/MultivariableCalculus/Question'/>
-         <QuestionList apicall="/api/multivariable"/>
+         <QuestionList apicall="https://coursebookserver.vercel.app/api/multivariable"/>
     </div>
   )
 }

@@ -8,7 +8,7 @@ const Question = () => {
         quizPath='/DataStructure/Quiz'
         questionPath='/DataStructure/Question'
         />
-        <QuestionList apicall="/api/datastructure"/>
+        <QuestionList apicall="https://coursebookserver.vercel.app/api/datastructure"/>
     </div>
   )
 }

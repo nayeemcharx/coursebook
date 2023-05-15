@@ -8,7 +8,7 @@ const Question = () => {
          algoPath='/Microcontroller'
          quizPath='/Microcontroller/Quiz'
          questionPath='/Microcontroller/Question'/>
-         <QuestionList apicall="/api/microcontroller"/>
+         <QuestionList apicall="https://coursebookserver.vercel.app/api/microcontroller"/>
     </div>
   )
 }

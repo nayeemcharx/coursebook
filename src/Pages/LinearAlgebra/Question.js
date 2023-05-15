@@ -9,7 +9,7 @@ const Question = () => {
         quizPath='/LinearAlgebra/Quiz'
         questionPath='/LinearAlgebra/Question'
         />
-        <QuestionList apicall="/api/linear"/>
+        <QuestionList apicall="https://coursebookserver.vercel.app/api/linear"/>
     </div>
   )
 }
