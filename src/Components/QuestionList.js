@@ -1,6 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react';
-
+import React,{useEffect,useState} from 'react'
 const Question = React.memo(({ question, index, onButtonClick }) => {
   return (
     <li>
@@ -13,15 +11,30 @@ const Question = React.memo(({ question, index, onButtonClick }) => {
           height="480"
           allow="autoplay"
           loading="lazy"
-          title='question'
         ></iframe>
       )}
     </li>
   );
 });
 
-const QuestionList = ({ items }) => {
-  const [questionList, setQuestionList] = useState(items);
+
+
+
+const QuestionList = ({ apicall }) => {
+
+
+  
+
+  const [questionList, setQuestionList] = useState([{}]);
+  useEffect(()=>{
+    fetch(apicall).then(
+      response =>response.json()
+    ).then(
+      data=>{
+        setQuestionList(data.dat)
+      }
+    )
+  },[])
 
   const handleViewButtonClick = (index) => {
     const updatedList = [...questionList];
