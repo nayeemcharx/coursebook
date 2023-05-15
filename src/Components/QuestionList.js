@@ -1,4 +1,5 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState } from 'react';
+
 const Question = React.memo(({ question, index, onButtonClick }) => {
   return (
     <li>
@@ -11,30 +12,29 @@ const Question = React.memo(({ question, index, onButtonClick }) => {
           height="480"
           allow="autoplay"
           loading="lazy"
+          title="something"
         ></iframe>
       )}
     </li>
   );
 });
 
-
-
-
 const QuestionList = ({ apicall }) => {
+  const [questionList, setQuestionList] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-
-  
-
-  const [questionList, setQuestionList] = useState([{}]);
-  useEffect(()=>{
-    fetch(apicall).then(
-      response =>response.json()
-    ).then(
-      data=>{
-        setQuestionList(data.dat)
-      }
-    )
-  },[])
+  useEffect(() => {
+    fetch(apicall)
+      .then((response) => response.json())
+      .then((data) => {
+        setQuestionList(data.dat);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching question data:", error);
+        setLoading(false);
+      });
+  }, []);
 
   const handleViewButtonClick = (index) => {
     const updatedList = [...questionList];
@@ -44,16 +44,20 @@ const QuestionList = ({ apicall }) => {
 
   return (
     <div className="algorithm-list">
-      <ul>
-        {questionList.map((item, index) => (
-          <Question
-            key={index}
-            question={item}
-            index={index}
-            onButtonClick={handleViewButtonClick}
-          />
-        ))}
-      </ul>
+      {loading ? (
+        <div className="loading-screen">Loading...</div>
+      ) : (
+        <ul>
+          {questionList.map((item, index) => (
+            <Question
+              key={index}
+              question={item}
+              index={index}
+              onButtonClick={handleViewButtonClick}
+            />
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
