@@ -9,7 +9,7 @@ pipeline {
                     sh 'npx sonar-scanner \
                         -Dsonar.projectKey=coursebook \
                         -Dsonar.sources=. \
-                        -Dsonar.host.url=$SONAR_HOST_URL \
+                        -Dsonar.host.url=http://sonarqube:9000\
                         -Dsonar.login=$SONAR_AUTH_TOKEN'
                 }
             }
