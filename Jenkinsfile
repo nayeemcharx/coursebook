@@ -5,7 +5,12 @@ pipeline {
         stage('Scan') {
             steps {
                 withSonarQubeEnv('sq1') {
-                    sh './mvnw clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
+                    sh 'npm install'
+                    sh 'npx sonar-scanner \
+                        -Dsonar.projectKey=coursebook \
+                        -Dsonar.sources=. \
+                        -Dsonar.host.url=$SONAR_HOST_URL \
+                        -Dsonar.login=$SONAR_AUTH_TOKEN'
                 }
             }
         }
