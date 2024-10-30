@@ -6,11 +6,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('sq1') {
                     sh 'npm install'
-                    sh 'npx sonar-scanner \
-                        -Dsonar.projectKey=coursebook \
-                        -Dsonar.sources=. \
-                        -Dsonar.host.url=http://sonarqube:9000\
-                        -Dsonar.login=$jenkins.sonar'
+                    sh 'npx sonar-scanner -Dsonar.projectKey=coursebook -Dsonar.sources=.'
                 }
             }
         }
