@@ -3,20 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@adobe/css-tools": "^4.3.2",
+    "@babel/runtime": "^7.26.10",
     "@react-spring/web": "^9.6.1",
+    "@remix-run/router": "^1.23.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "automata.js": "^0.2.1",
     "bootstrap": "^5.2.3",
+    "braces": "^3.0.3",
+    "d3-color": "^3.1.0",
     "framer-motion": "^10.12.10",
     "graphviz-react": "^1.2.5",
+    "lodash": "^4.18.0",
     "mafs": "^0.16.0",
     "mathjax": "^3.2.2",
     "mathjs": "^11.8.0",
+    "micromatch": "^4.0.8",
+    "picomatch": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-router": "^6.30.4",
     "react-router-dom": "^6.10.0",
     "react-transition-group": "^4.4.5",
     "rsuite": "^5.30.0",
@@ -48,7 +57,7 @@
     ]
   },
   "devDependencies": {
-    "react-scripts": "^5.0.1",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "react-scripts": "^5.0.1"
   }
 }
